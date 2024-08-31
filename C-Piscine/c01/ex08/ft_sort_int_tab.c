@@ -1,11 +1,8 @@
 void	ft_swap(int *a, int *b)
 {
-	if (a != b)
-	{
-		*a = *a + *b;
-		*b = *a - *b;
-		*a = *a - *b;
-	}
+	*a = *a + *b;
+	*b = *a - *b;
+	*a = *a - *b;
 }
 
 void	ft_sort_int_tab(int *tab, int size)
@@ -25,7 +22,8 @@ void	ft_sort_int_tab(int *tab, int size)
 				min_idx = nxt_idx;
 			nxt_idx++;
 		}
-		ft_swap(&tab[cur_idx], &tab[min_idx]);
+		if (cur_idx != min_idx)
+			ft_swap(&tab[cur_idx], &tab[min_idx]);
 		cur_idx++;
 	}
 }
