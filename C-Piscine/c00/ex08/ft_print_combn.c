@@ -1,38 +1,35 @@
 #include <unistd.h>
 
-void	increment(char *combs, int idx)
+void	increment(char *combination, int idx)
 {
-	char	*px;
-
-	px = &combs[idx];
-	if (*px < idx + '0')
+	if (combination[idx] < idx + '0')
 	{
-		*px += 1;
+		combination[idx]++;
 	}
 	else
 	{
-		increment(combs, idx - 1);
-		*px = *(px - 1) + 1;
+		increment(combination, idx - 1);
+		combination[idx] = combination[idx - 1] + 1;
 	}
 }
 
 void	ft_print_combn(int n)
 {
-	char	combs[10];
+	char	combination[10];
 	int		idx;
 
-	combs[9 - n] = '0';
+	combination[9 - n] = '0';
 	idx = 10 - n;
 	while (idx < 10)
 	{
-		combs[idx] = idx - (10 - n) + '0';
+		combination[idx] = idx - (10 - n) + '0';
 		idx++;
 	}
-	while (combs[9 - n] == '0')
+	while (combination[9 - n] == '0')
 	{
-		write(1, &combs[10 - n], n);
-		increment(combs, 9);
-		if (combs[9 - n] == '0')
+		write(1, &combination[10 - n], n);
+		increment(combination, 9);
+		if (combination[9 - n] == '0')
 			write(1, ", ", 2);
 	}
 }
