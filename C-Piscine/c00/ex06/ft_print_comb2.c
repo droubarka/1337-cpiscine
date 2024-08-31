@@ -7,8 +7,8 @@ void	ft_putchar(char c)
 
 void	ft_print_comb2(void)
 {
-	short int	num1;
-	short int	num2;
+	char	num1;
+	char	num2;
 
 	num1 = 0;
 	while (num1 <= 98)
