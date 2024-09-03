@@ -1,18 +1,10 @@
-/* !!! NOT FINISHED YET !!!
-*/
 #include <unistd.h>
-#include <stdio.h>
 
 char	*g_base = "0123456789abcdef";
 
-short int	is_printable(char c)
-{
-	return (31 < c && c < 127);
-}
-
 void	putchar_hex(unsigned char c)
 {
-	char hex[3];
+	char	hex[2];
 
 	hex[0] = g_base[c / 16];
 	hex[1] = g_base[c % 16];
@@ -21,8 +13,8 @@ void	putchar_hex(unsigned char c)
 
 void	putaddr(void *addr)
 {
-	short int	idx;
 	unsigned long	ulong_addr;
+	unsigned int	idx;
 
 	ulong_addr = (unsigned long) addr;
 	idx = 0;
@@ -32,64 +24,60 @@ void	putaddr(void *addr)
 		ulong_addr <<= 4;
 		idx++;
 	}
-
 }
 
-
-
-void	putrow(void *addr, unsigned int size)
+void	putdata(unsigned char *data, unsigned int size)
 {
 	unsigned int	idx;
-	char	*data;
 
-	putaddr(addr);
-	write(1, ": ", 2);
-
-	data = (char *) addr;
 	idx = 0;
 	while (idx < size)
 	{
-		putchar_hex(data[idx]);
-		idx++;
-	}
-
-	write(1, " ", 1);
-	idx = 0;
-	while (idx < size)
-	{
-		if (is_printable(data[idx]))
+		if (31 < data[idx] && data[idx] < 127)
 			write(1, &data[idx], 1);
 		else
 			write(1, ".", 1);
 		idx++;
 	}
+}
+
+void	putrow(void *addr, unsigned int size, unsigned int col_size)
+{
+	unsigned char	*data;
+	unsigned int	idx;
+
+	data = (unsigned char *) addr;
+	putaddr(addr);
+	write(1, ": ", 2);
+	idx = 0;
+	while (idx < size)
+	{
+		putchar_hex(data[idx]);
+		if (idx % 2)
+			write(1, " ", 1);
+		idx++;
+	}
+	while (idx < col_size)
+		write(1, "   ", 2 + (idx++ % 2));
+	putdata(data, size);
 	write(1, "\n", 1);
 }
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
+	unsigned int	col_size;
+	unsigned int	chunk_size;
 	unsigned int	idx;
-	unsigned int	nrows;
 
-	unsigned int rsz = 16;
-
-	nrows = ((-size) % rsz + size) / rsz; // rsz !?
-
+	col_size = 16;
+	chunk_size = col_size;
 	idx = 0;
-	while (idx < nrows)
+	while (idx < size)
 	{
-		putrow(idx * rsz + addr, rsz);
-		idx++;
+		if (size <= idx + col_size)
+			chunk_size = size - idx;
+		putrow(addr + idx, chunk_size, col_size);
+		idx += col_size;
 	}
 	return (addr);
-}
-
-#include <string.h>
-int	main(void)
-{
-	char	addr[] = "hello world random tXt blaa blaa blaa";
-	strcat(addr, (char[]) {127,'0','0',1});
-	strcat(addr, ":1337 local.");
-
-	ft_print_memory(addr, 30);
 }
