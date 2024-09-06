@@ -20,7 +20,7 @@ void	putaddr(void *addr)
 	idx = 0;
 	while (idx < 16)
 	{
-		write(1, &g_base[(ulong_addr >> 60) & 0xf], 1);
+		write(1, &g_base[ulong_addr >> 60], 1);
 		ulong_addr <<= 4;
 		idx++;
 	}
