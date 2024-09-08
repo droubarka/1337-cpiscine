@@ -1,3 +1,4 @@
+/*
 char	*ft_strcpy(char *dest, char *src)
 {
 	unsigned int	idx;
@@ -9,5 +10,19 @@ char	*ft_strcpy(char *dest, char *src)
 		idx++;
 	}
 	dest[idx] = '\0';
+	return (dest);
+}
+*/
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	char	*buff;
+
+	buff = dest;
+	while (*src)
+	{
+		*buff++ = *src++;
+	}
+	*buff = '\0';
 	return (dest);
 }
