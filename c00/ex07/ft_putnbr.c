@@ -13,8 +13,8 @@ void	ft_putnbr(int nb)
 		nb *= -1;
 		if (nb < 0)
 		{
-			ft_putnbr(-1 * (nb / 10));
-			nb = -1 * (nb % 10);
+			ft_putnbr(-(nb / 10));
+			nb = -(nb % 10);
 		}
 	}
 	if (9 < nb)
