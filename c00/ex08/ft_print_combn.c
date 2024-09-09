@@ -16,7 +16,7 @@ void	increment(char *combination, int idx)
 void	ft_print_combn(int n)
 {
 	char	combination[10];
-	int		idx;
+	short int		idx;
 
 	combination[9 - n] = '0';
 	idx = 10 - n;
