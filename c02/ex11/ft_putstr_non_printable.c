@@ -17,6 +17,7 @@ void	putchar_hex(unsigned char c)
 	write(1, hex, 3);
 }
 
+/*
 void	ft_putstr_non_printable(char *str)
 {
 	unsigned int	idx;
@@ -29,5 +30,18 @@ void	ft_putstr_non_printable(char *str)
 		else
 			putchar_hex(str[idx]);
 		idx++;
+	}
+}
+*/
+
+void	ft_putstr_non_printable(char *str)
+{
+	while (*str)
+	{
+		if (is_printable(*str))
+			write(1, str, 1);
+		else
+			putchar_hex(*str);
+		str++;
 	}
 }
