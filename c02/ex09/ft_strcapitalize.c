@@ -1,14 +1,14 @@
-int	is_uppercase(char c)
+short int	is_uppercase(char c)
 {
 	return ('A' <= c && c <= 'Z');
 }
 
-int	is_lowercase(char c)
+short int	is_lowercase(char c)
 {
 	return ('a' <= c && c <= 'z');
 }
 
-int	is_alnum(char c)
+short int	is_alnum(char c)
 {
 	return (('0' <= c && c <= '9') || is_uppercase(c) || is_lowercase(c));
 }
