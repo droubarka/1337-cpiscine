@@ -15,7 +15,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	char	*buff;
 
 	buff = dest + ft_strlen(dest);
-	while (nb-- && *src)
+	while (0 < nb-- && *src)
 	{
 		*buff++ = *src++;
 	}
