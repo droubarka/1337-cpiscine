@@ -4,8 +4,9 @@ char	*ft_strcat(char *dest, char *src)
 	char	*buff;
 
 	buff = dest;
-	while (*buff++)
+	while (*buff)
 	{
+		buff++;
 	}
 	while (*src)
 	{
