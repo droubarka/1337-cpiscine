@@ -3,6 +3,15 @@
 /*
 void	ft_putstr(char *str)
 {
+	while (*str)
+	{
+		write(1, str++, 1);
+	}
+}
+*/
+
+void	ft_putstr(char *str)
+{
 	unsigned int	idx;
 
 	idx = 0;
@@ -11,13 +20,4 @@ void	ft_putstr(char *str)
 		idx++;
 	}
 	write(1, str, idx);
-}
-*/
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-	{
-		write(1, str++, 1);
-	}
 }
