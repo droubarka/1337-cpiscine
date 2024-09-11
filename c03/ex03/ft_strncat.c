@@ -1,3 +1,22 @@
+/*
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
+{
+	char	*buff;
+
+	buff = dest;
+	while (*buff)
+	{
+		buff++;
+	}
+	while (0 < nb-- && *src)
+	{
+		*buff++ = *src++;
+	}
+	*buff = '\0';
+	return (dest);
+}
+*/
+
 unsigned int	ft_strlen(char *str)
 {
 	unsigned int	idx;
