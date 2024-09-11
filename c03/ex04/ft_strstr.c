@@ -1,3 +1,27 @@
+/*
+char	*ft_strstr(char *str, char *to_find)
+{
+	unsigned int	idx;
+
+	if (!*to_find)
+		return (str);
+	while (*str)
+	{
+		idx = 0;
+		while (to_find[idx])
+		{
+			if (*(str + idx) != to_find[idx])
+				break ;
+			idx++;
+		}
+		if (!to_find[idx])
+			return (str);
+		str++;
+	}
+	return (0);
+}
+*/
+
 unsigned int	ft_strlen(char *str)
 {
 	unsigned int	idx;
