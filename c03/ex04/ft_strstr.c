@@ -22,7 +22,7 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		d_len = ft_strlen(str) - ft_strlen(to_find);
 		s_idx = 0;
-		while (str[s_idx] && s_idx <= d_len)
+		while (s_idx <= d_len && str[s_idx])
 		{
 			f_idx = 0;
 			while (to_find[f_idx])
