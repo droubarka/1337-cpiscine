@@ -27,3 +27,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	*dest = '\0';
 	return (dst_len + src_len);
 }
+
+char	*comment = "I HAVE QUESTIONS!?"
