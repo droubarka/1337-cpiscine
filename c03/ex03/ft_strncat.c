@@ -8,7 +8,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		buff++;
 	}
-	while (0 < nb-- && *src)
+	while (nb-- && *src)
 	{
 		*buff++ = *src++;
 	}
