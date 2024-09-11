@@ -14,18 +14,18 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	dst_len;
 	unsigned int	src_len;
+	unsigned int	nb;
 
-	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	if (size <= dst_len)
 		return (size + src_len);
 	dest += dst_len;
-	while (1 < size-- - dst_len && *src)
+	nb = size - dst_len - 1;
+	while (nb-- && *src)
 	{
 		*dest++ = *src++;
 	}
 	*dest = '\0';
 	return (dst_len + src_len);
 }
-
-char	*comment = "I HAVE QUESTIONS!?"
