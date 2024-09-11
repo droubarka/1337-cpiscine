@@ -1,18 +1,23 @@
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+/*
+void	ft_putstr(char *str)
 {
-	int	idx;
-
-	idx = 0;
-	while (*str++)
+	while (*str)
 	{
-		idx++;
+		write(1, str++, 1);
 	}
-	return (idx);
 }
+*/
 
 void	ft_putstr(char *str)
 {
-	write(1, str, ft_strlen(str));
+	unsigned int	idx;
+
+	idx = 0;
+	while (str[idx])
+	{
+		idx++;
+	}
+	write(1, str, idx);
 }
