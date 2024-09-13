@@ -6,8 +6,8 @@
 
 | Projects | Status | Projects | Status |
 | --- | --- | --- | --- |
-| c00 | Done | c07 | 49% |
-| c01 | Done | c08 | Not Started |
+| c00 | Done | c07 | Not Started |
+| c01 | Done | c08 | 49% |
 | c02 | Done | c09 | Not Started |
 | c03 | Done | c10 | Not Started |
 | c04 | Done | c11 | Not Started |
