@@ -2,7 +2,7 @@
 
 short int	is_non_printable(char c)
 {
-	return ((0 <= c && c <= 31) || c == 127);
+	return (c == 127 || (0 <= c && c <= 31));
 }
 
 short int	is_asign(char c)
