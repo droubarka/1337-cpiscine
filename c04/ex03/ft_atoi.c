@@ -18,12 +18,12 @@ int	ft_atoi(char *str)
 	char	sign;
 	int		integer;
 
-	while (*str && is_space(*str))
+	while (is_space(*str))
 	{
 		str++;
 	}
 	sign = 1;
-	while (*str && is_asign(*str))
+	while (is_asign(*str))
 	{
 		if (*str == '-')
 		{
@@ -32,7 +32,7 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	integer = 0;
-	while (*str && is_digit(*str))
+	while (is_digit(*str))
 	{
 		integer = integer * 10 + (*str - '0');
 		str++;
