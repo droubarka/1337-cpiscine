@@ -6,10 +6,10 @@
 
 | Projects | Status | Projects | Status |
 | --- | --- | --- | --- |
-| c00 | <font color="limegreen"> Done </font> | c07 | <font color="red"> Not Started </font> |
-| c01 | <font color="limegreen"> Done </font> | c08 | <font color="red"> Not Started </font> |
-| c02 | <font color="limegreen"> Done </font> | c09 | <font color="red"> Not Started </font> |
-| c03 | <font color="limegreen"> Done </font> | c10 | <font color="red"> Not Started </font> |
-| c04 | <font color="orange"> 99% </font> | c11 | <font color="red"> Not Started </font> |
-| c05 | <font color="orange"> 89% </font> | c12 | <font color="red"> Not Started </font> |
-| c06 | <font color="red"> Not Started </font> | c13 | <font color="red"> Not Started </font> |
+| c00 | <span style="color:limegreen">Done</span> | c07 | <span style="color:red">Not Started</span> |
+| c01 | <span style="color:limegreen">Done</span> | c08 | <span style="color:red">Not Started</span> |
+| c02 | <span style="color:limegreen">Done</span> | c09 | <span style="color:red">Not Started</span> |
+| c03 | <span style="color:limegreen">Done</span> | c10 | <span style="color:red">Not Started</span> |
+| c04 | <span style="color:orange">99%</span> | c11 | <span style="color:red">Not Started</span> |
+| c05 | <span style="color:orange">89%</span> | c12 | <span style="color:red">Not Started</span> |
+| c06 | <span style="color:red">Not Started</span> | c13 | <span style="color:red">Not Started</span> |
