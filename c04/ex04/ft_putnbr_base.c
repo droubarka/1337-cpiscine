@@ -1,8 +1,8 @@
 #include <unistd.h>
 
-short int	is_printable(char c)
+short int	is_non_printable(char c)
 {
-	return (c < 0 || (31 < c && c < 127));
+	return ((0 <= c && c <= 31) || c == 127);
 }
 
 short int	is_asign(char c)
@@ -18,7 +18,7 @@ short int	is_base_valid(char *base)
 	base_len = 0;
 	while (*base)
 	{
-		if (!is_printable(*base) || is_asign(*base))
+		if (is_non_printable(*base) || is_asign(*base))
 		{
 			return (0);
 		}
