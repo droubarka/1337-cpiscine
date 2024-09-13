@@ -12,4 +12,4 @@
 | c03 | Done | c10 | Not Started |
 | c04 | Done | c11 | Not Started |
 | c05 | 89% | c12 | Not Started |
-| c06 | Not Started | c13 | Not Started |
+| c06 | 50% | c13 | Not Started |
