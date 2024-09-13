@@ -1,6 +1,6 @@
 short int	is_space(char c)
 {
-	return (c == 32 || (9 <= c && c <= 13));
+	return ((9 <= c && c <= 13) || c == 32);
 }
 
 short int	is_base_valid(char *base)
@@ -67,12 +67,12 @@ int	ft_atoi_base(char *str, char *base)
 
 	if (!is_base_valid(base))
 		return (0);
-	while (*str && is_space(*str))
+	while (is_space(*str))
 	{
 		str++;
 	}
 	sign = 1;
-	while (*str && (*str == '+' || *str == '-'))
+	while (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
 			sign *= -1;
@@ -80,7 +80,7 @@ int	ft_atoi_base(char *str, char *base)
 	}
 	base_len = ft_strlen(base);
 	integer = 0;
-	while (*str && get_index(base, *str) != -1)
+	while (get_index(base, *str) != -1)
 	{
 		integer = integer * base_len + get_index(base, *str);
 		str++;
