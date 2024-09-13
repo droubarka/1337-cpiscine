@@ -2,8 +2,9 @@
 
 int	main(int argc, char **argv)
 {
-	while (--argc && argv++)
+	while (--argc)
 	{
+		argv++;
 		while (**argv)
 		{
 			write(1, (*argv)++, 1);
