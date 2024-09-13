@@ -6,10 +6,10 @@
 
 | Projects | Status | Projects | Status |
 | --- | --- | --- | --- |
-| c00 | <span style="color:limegreen">Done</span> | c07 | <span style="color:red">Not Started</span> |
-| c01 | <span style="color:limegreen">Done</span> | c08 | <span style="color:red">Not Started</span> |
-| c02 | <span style="color:limegreen">Done</span> | c09 | <span style="color:red">Not Started</span> |
-| c03 | <span style="color:limegreen">Done</span> | c10 | <span style="color:red">Not Started</span> |
-| c04 | <span style="color:orange">99%</span> | c11 | <span style="color:red">Not Started</span> |
-| c05 | <span style="color:orange">89%</span> | c12 | <span style="color:red">Not Started</span> |
-| c06 | <span style="color:red">Not Started</span> | c13 | <span style="color:red">Not Started</span> |
+| c00 | Done | c07 | Not Started |
+| c01 | Done | c08 | Not Started |
+| c02 | Done | c09 | Not Started |
+| c03 | Done | c10 | Not Started |
+| c04 | 99% | c11 | Not Started |
+| c05 | 89% | c12 | Not Started |
+| c06 | Not Started | c13 | Not Started |
