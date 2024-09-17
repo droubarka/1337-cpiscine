@@ -1,4 +1,5 @@
 [![Status: In Development](https://img.shields.io/badge/Status-In%20Development-blue)]()
+[![Last Commit](https://img.shields.io/github/last-commit/droubarka/1337-CPiscine)]()
 
 # 1337-CPiscine
 
