@@ -1,4 +1,4 @@
-#include <malloc.h>
+#include <stdlib.h>
 
 unsigned int	ft_strlen(char *str)
 {
@@ -18,13 +18,14 @@ void	ft_strcpy(char *dest, char *src)
 	{
 		*dest++ = *src++;
 	}
+	*dest = '\0';
 }
 
 char	*ft_strdup(char *str)
 {
 	char	*dup;
 
-	dup = malloc(ft_strlen(str) + 1);
+	dup = (char *) malloc(ft_strlen(str) + 1);
 	if (dup != NULL)
 		ft_strcpy(dup, str);
 	return (dup);
