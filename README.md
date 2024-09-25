@@ -12,8 +12,8 @@
 | c02 | Done | c09 | Not Started |
 | c03 | Done | c10 | Not Started |
 | c04 | Done | c11 | Not Started |
-| c05 | 89% | c12 | Not Started |
-| c06 | 89% | c13 | Not Started |
+| c05 | 90% | c12 | Not Started |
+| c06 | 75% | c13 | Not Started |
 
 ## License
 **1337-CPiscine** is licensed under the MIT License. See [LICENSE](LICENSE) for details.
