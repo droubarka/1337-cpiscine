@@ -4,11 +4,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	char	*buff;
 
 	buff = dest;
-	while (0 < n-- && *src)
+	while (n && *src)
 	{
 		*buff++ = *src++;
+		n--;
 	}
-	while (0 < n--)
+	while (n--)
 		*buff++ = '\0';
 	return (dest);
 }
